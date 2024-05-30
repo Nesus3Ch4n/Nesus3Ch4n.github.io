@@ -141,7 +141,7 @@
 .son, #objetive{
     position:relative;
     left: 800px;
-    background: rgba(0, 110, 253, 0.689);
+    background: rgba(255, 255, 255, 0.689);
     font-family: "Oswald", sans-serif;
     padding: 10px ;
     width: 550px;
@@ -166,7 +166,7 @@
     position:relative;
     top: -5px;
     left: 10px;
-    background: rgba(0, 110, 253, 0.689);
+    background: rgb(255, 255, 255);
     font-family: "Oswald", sans-serif;
     padding: 10px ;
     width: 550px;
@@ -183,7 +183,7 @@ input.error {
     position:relative;
     top: -5px;
     left: 450px;
-    background: rgba(0, 110, 253, 0.689);
+    background: rgb(221, 221, 221);
     font-family: "Oswald", sans-serif;
     padding: 10px ;
     width: 700px;

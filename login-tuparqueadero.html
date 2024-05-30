@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title></title>
         <meta charset="UTF-8">
@@ -49,19 +49,31 @@
             <br>
             <section>
                 <div class="son" id="login">
-                    <form action="reservarparqueadero.html">
-                        <h4>Iniciar Seccion</h4>
-                        <label for="correo">Correo:</label>
-                        <input type="email" id="email">
+                    <form id="loginform"  th:action="@{/login}">
+                        <h4 style="text-align: center;">TuParqueadero USC</h4>
+                        <h4 style="text-align: center;">Iniciar Sesión</h4>
+                        
+                        <a style="color: black; position: relative; left: 150px;" href="@{/oauth2/authorization/github}">Iniciar sesión con GitHub</a>
                         <br>
-                        <label for="password">Contraseña</label>
-                        <input type="password" id="password">
+                        <a style="color: black; position: relative; left: 150px;" href="@{/oauth2/authorization/google}">Iniciar sesión con Google</a>
                         <br>
-                        <a style="color: black;" href>¿Olvidaste tu contraseña?</a>
-                        <a style="color: black;" href>Crear una cuenta</a>
+                        <h5 style="text-align: center;">Por favor, ingrese un correo y contraseña</h5>
+                        <label style="position: relative; left: 100px;" for="correo">Correo:</label>
+                        <input style="position: relative; left: 130px;" type="username" id="username" arial-describedby="emailHelp" placeholder="Ingresa un correo">
                         <br>
-                        <button type="submit" onclick="validar()">Logear</button>
+                        
+                        <br>
+                        <label style="position: relative; left: 100px;" for="password" >Contraseña</label>
+                        <input style="position: relative; left: 100px;" tabindex="0" type="password" id="password" placeholder="Ingresa una contraseña">
+                        <br>
+                        <small style="position: relative; left: 70px;" id="emailHelp">Nunca compartiremos tu correo y contraseña con nadie mas</small>
+                        <br>
+                        <button class="btn btn-warning" style="position: relative; left: 200px;" tabindex="0"><a style="text-decoration:none; color: black;" href="registro.html" title="Crear una cuenta nueva">Crear una cuenta</a></button>
+                        <br>
+                        <button class="btn btn-dark" style="position: relative; left: 230px;" tabindex="0" type="submit" title="Loguearse">Loguear</button>
+                        <br>
                     </form>
+                    <div id="errorMessages"></div>
                 </div>
             </section>
             <br>
@@ -73,6 +85,8 @@
         <script src="js/newIntegrantes.js"></script>
         <!-- <script src="js/newPruebas.js"></script> -->
         <script src="js/hacerReserva.js"></script>
+        <!-- <script src="js/newPruebas.js"></script> -->
+        <script src="js/loginAuth.js"></script>
         <!-- <script src="js/newPruebas.js"></script> -->
     </body>
 
